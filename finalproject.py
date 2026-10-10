@@ -5,8 +5,12 @@ import pandas as pd
 import os
 
 
-def get_secret_key():
-    key = os.getenv()
+def get_secret(name):
+    key = os.getenv(name)
+    if key:
+        return key
+    
+
 
 st.set_page_config(page_title="Casino App", page_icon="🎰", layout="wide")
 
